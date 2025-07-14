@@ -14,8 +14,8 @@
     "target_branch": "main"
   },
   "git": {
-    "auto_push": false,
-    "auto_pr": false
+    "auto_push": true,
+    "auto_pr": true
   },
   "output_dir": ".",
   "tasks_file": "tasks.json"
