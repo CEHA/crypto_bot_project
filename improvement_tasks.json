@@ -1,0 +1,14 @@
+[
+  {
+    "id": "default_full_cycle_20250712223223123482",
+    "type": "self_improvement",
+    "improvement_type": "full_cycle",
+    "description": "Стандартний повний цикл самовдосконалення.",
+    "options": {
+      "analyze_architecture": true,
+      "improve_code_quality": true,
+      "update_documentation": true,
+      "run_tests": true
+    }
+  }
+]

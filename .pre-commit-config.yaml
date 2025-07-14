@@ -1,0 +1,33 @@
+# Див. https://pre-commit.com для отримання додаткової інформації
+# Див. https://docs.astral.sh/ruff/integrations/#pre-commit для налаштування ruff
+
+repos:
+-   repo: https://github.com/astral-sh/ruff-pre-commit
+    # Вкажіть версію ruff, щоб забезпечити консистентність
+    rev: v0.4.4
+    hooks:
+        # Запускає форматувальник, сумісний з black
+        -   id: ruff-format
+        # Запускає лінтер з автовиправленням
+        - id: ruff
+          args: [--fix, --exit-non-zero-on-fix]
+
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+    -   id: trailing-whitespace # Видаляє зайві пробіли в кінці рядків
+    -   id: end-of-file-fixer   # Переконується, що файл закінчується одним порожнім рядком
+    -   id: check-yaml          # Перевіряє синтаксис YAML файлів
+
+-   repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.10.0
+    hooks:
+    -   id: mypy
+        # Вказуємо mypy, які бібліотеки використовуються в проєкті,
+        # щоб він міг коректно перевіряти їх типи.
+        # Ці залежності мають відповідати вашому requirements.txt
+        additional_dependencies:
+            - google-generativeai
+            - patch
+            - pytest
+            - pytest-mock

@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Module Setup Configuration",
+  "description": "Schema for validating the module_setup.json file.",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "name": {
+        "description": "The registration name of the module in ModuleRegistry.",
+        "type": "string"
+      },
+      "attr": {
+        "description": "The attribute name to assign the module instance to on the DevAgent.",
+        "type": "string"
+      },
+      "deps": {
+        "description": "A dictionary of dependencies for the module. Key is the constructor parameter name, value is the attribute name on the DevAgent.",
+        "type": "object",
+        "patternProperties": {
+          "^[a-zA-Z_][a-zA-Z0-9_]*$": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "required": ["name", "attr", "deps"]
+  }
+}

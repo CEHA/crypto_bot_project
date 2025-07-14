@@ -1,0 +1,27 @@
+[tool.mypy]
+python_version = "3.10" # Вкажіть вашу версію Python
+
+ignore_missing_imports = true # Не скаржитися на бібліотеки без типів
+
+disallow_untyped_defs = true    # Забороняє створювати функції без анотацій типів
+warn_return_any = true          # Попереджає, якщо функція повертає Any
+warn_unused_configs = true      # Попереджає про невикористані налаштування mypy
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+testpaths = [
+    "modules/tests"
+]
+python_files = "test_*.py"
+python_classes = "Test*"
+python_functions = "test_*"
+addopts = [
+    "-v", # Детальний вивід
+    "--strict-markers", # Перевірка маркерів
+    "--cov=modules", # Вказуємо директорію для вимірювання покриття
+    "--cov-report=term-missing", # Виводити звіт в термінал з пропущеними рядками
+    "--cov-report=html", # Генерувати HTML-звіт у директорії htmlcov/
+]
+
+[tool.ruff]
+# Тут можуть бути ваші налаштування для ruff

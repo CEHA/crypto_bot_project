@@ -1,0 +1,35 @@
+line-length = 120
+
+[lint]
+select = [
+    "E",  # pycodestyle errors
+    "W",  # pycodestyle warnings
+    "F",  # pyflakes
+    "I",  # isort
+    "D",  # pydocstyle (includes Google style)
+    "ANN", # flake8-annotations
+    "B",  # flake8-bugbear
+    "C4", # flake8-comprehensions 
+    "T10", # flake8-debugger 
+]
+ignore = [
+    "E501", # Line too long (handled by black) - ruff format
+    "D100", # Missing docstring in public module - ruff format
+    "D104", # Missing docstring in public package - ruff format
+    "D107", # Missing docstring in __init__ - ruff format
+    "ANN001", # Missing type annotation for function argument - mypy 
+    "ANN101", # Missing type annotation for self - mypy 
+]
+ignore-init-module-imports = true # Whether to skip `__init__.py` when linting
+
+[lint.pydocstyle]
+convention = "google" # Ensure Google style docstrings
+
+[format]
+docstring-code-line-length = "dynamic" # Respect code line length in docstrings
+
+[lint.isort]
+combine-as-imports = true # Merge multi-line imports
+force-single-line = false # Each root import on its own line
+known-first-party = ["crypto_bot_project"] # Project's root folder
+lines-after-imports = 2 # Number of lines after imports

@@ -1,0 +1,65 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Caches
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+*.cache
+
+# Generated files
+gemini_cache.json
+error_cache.json
+automation.log
+*.backup
+*_fixed.py
+*refactoring_suggestions.txt
+*dead_code_suggestions.txt
+
+# Logs
+logs/
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+.env.production
+
+# Temporary
+*.tmp
+*.temp

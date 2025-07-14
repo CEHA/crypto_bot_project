@@ -1,0 +1,5 @@
+include README.md
+include requirements.txt
+include tasks.json
+include dev_agent_config.json
+include .env.example

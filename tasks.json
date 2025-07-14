@@ -1,0 +1,59 @@
+[
+  {
+    "type": "self_improvement",
+    "improvement_type": "full_cycle",
+    "description": "Запустити повний цикл самовдосконалення з новою архітектурою: unified fixer, ротація моделей, очищення завдань."
+  },
+  {
+    "type": "analysis",
+    "analysis_type": "gemini_parameter_performance",
+    "description": "Проаналізувати ефективність ротації API ключів та моделей Gemini."
+  },
+  {
+    "type": "analysis",
+    "analysis_type": "code_quality_review",
+    "target_files": [
+      "modules/utils/gemini_client.py",
+      "modules/core/task_cleaner.py",
+      "continuous_improvement.py"
+    ],
+    "description": "Огляд якості нових модулів: GeminiClient з ротацією, TaskCleaner, система нескінченних поліпшень."
+  },
+  {
+    "type": "test",
+    "test_type": "generate_tests",
+    "target_files": [
+      "modules/core/task_cleaner.py",
+      "modules/utils/gemini_client.py"
+    ],
+    "description": "Згенерувати тести для нових компонентів: безпечне очищення завдань та ротація моделей."
+  },
+  {
+    "type": "refactoring",
+    "refactoring_type": "optimize_continuous_loop",
+    "target_files": [
+      "continuous_improvement.py",
+      "start_continuous.sh"
+    ],
+    "description": "Оптимізувати цикл нескінченного поліпшення: адаптивні інтервали, розумне керування ресурсами."
+  },
+  {
+    "type": "documentation",
+    "doc_type": "update_readme",
+    "description": "Оновити README.md: нова архітектура фіксерів, ротація моделей, нескінченні поліпшення."
+  },
+  {
+    "type": "analysis",
+    "analysis_type": "identify_key_modules",
+    "options": {
+      "strategy": "complexity",
+      "top_n": 3
+    },
+    "description": "Визначити 3 найскладніші модулі для пріоритетного рефакторингу."
+  },
+  {
+    "type": "self_improvement",
+    "improvement_type": "error_analysis",
+    "description": "Аналіз помилок Gemini API та створення стратегій їх уникнення через ротацію."
+  }
+]
